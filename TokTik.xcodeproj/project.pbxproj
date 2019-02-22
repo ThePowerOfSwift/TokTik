@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101B4D9012EB776524C99B58 /* Pods_TokTikTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E64C7881D8E11C3AA67C56 /* Pods_TokTikTests.framework */; };
 		4811E898221FCB3A00974854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E897221FCB3A00974854 /* AppDelegate.swift */; };
 		4811E89A221FCB3A00974854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E899221FCB3A00974854 /* ViewController.swift */; };
 		4811E89D221FCB3A00974854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4811E89B221FCB3A00974854 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		4811E8A2221FCB3D00974854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4811E8A0221FCB3D00974854 /* LaunchScreen.storyboard */; };
 		4811E8AD221FCB3D00974854 /* TokTikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8AC221FCB3D00974854 /* TokTikTests.swift */; };
 		4811E8B8221FCB3D00974854 /* TokTikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8B7221FCB3D00974854 /* TokTikUITests.swift */; };
+		5E0A09DE0676FC1165A2CCFA /* Pods_TokTik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD606591B960F9F7DA3B1F54 /* Pods_TokTik.framework */; };
+		CCE331C66FF87846C4566F57 /* Pods_TokTikUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6084AD486C55127E729311E /* Pods_TokTikUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4145EAF23A244CFFF6427DB3 /* Pods-TokTikUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikUITests/Pods-TokTikUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4811E894221FCB3A00974854 /* TokTik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokTik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4811E897221FCB3A00974854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4811E899221FCB3A00974854 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		4811E8B3221FCB3D00974854 /* TokTikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokTikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4811E8B7221FCB3D00974854 /* TokTikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokTikUITests.swift; sourceTree = "<group>"; };
 		4811E8B9221FCB3D00974854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C31B361621C4C19E2776031 /* Pods-TokTikUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikUITests/Pods-TokTikUITests.release.xcconfig"; sourceTree = "<group>"; };
+		56AFAD66EA1C740DB31E565C /* Pods-TokTik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokTik/Pods-TokTik.debug.xcconfig"; sourceTree = "<group>"; };
+		5F7586E03C0461E57B2B3163 /* Pods-TokTikTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikTests/Pods-TokTikTests.release.xcconfig"; sourceTree = "<group>"; };
+		88193C37A44FE79B56944E37 /* Pods-TokTikTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikTests/Pods-TokTikTests.debug.xcconfig"; sourceTree = "<group>"; };
+		923B6804CF31FEC4F8AE71F1 /* Pods-TokTik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTik.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokTik/Pods-TokTik.release.xcconfig"; sourceTree = "<group>"; };
+		93E64C7881D8E11C3AA67C56 /* Pods_TokTikTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokTikTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6084AD486C55127E729311E /* Pods_TokTikUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokTikUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD606591B960F9F7DA3B1F54 /* Pods_TokTik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokTik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0A09DE0676FC1165A2CCFA /* Pods_TokTik.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101B4D9012EB776524C99B58 /* Pods_TokTikTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE331C66FF87846C4566F57 /* Pods_TokTikUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				4811E8AB221FCB3D00974854 /* TokTikTests */,
 				4811E8B6221FCB3D00974854 /* TokTikUITests */,
 				4811E895221FCB3A00974854 /* Products */,
+				4A274821BCA5FD057FC5AF7E /* Pods */,
+				E4B9B7BFFCE6E063D05E2A18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = TokTikUITests;
 			sourceTree = "<group>";
 		};
+		4A274821BCA5FD057FC5AF7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56AFAD66EA1C740DB31E565C /* Pods-TokTik.debug.xcconfig */,
+				923B6804CF31FEC4F8AE71F1 /* Pods-TokTik.release.xcconfig */,
+				88193C37A44FE79B56944E37 /* Pods-TokTikTests.debug.xcconfig */,
+				5F7586E03C0461E57B2B3163 /* Pods-TokTikTests.release.xcconfig */,
+				4145EAF23A244CFFF6427DB3 /* Pods-TokTikUITests.debug.xcconfig */,
+				4C31B361621C4C19E2776031 /* Pods-TokTikUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E4B9B7BFFCE6E063D05E2A18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD606591B960F9F7DA3B1F54 /* Pods_TokTik.framework */,
+				93E64C7881D8E11C3AA67C56 /* Pods_TokTikTests.framework */,
+				B6084AD486C55127E729311E /* Pods_TokTikUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4811E8BC221FCB3D00974854 /* Build configuration list for PBXNativeTarget "TokTik" */;
 			buildPhases = (
+				E8640F4BD33BEC858AB2FD94 /* [CP] Check Pods Manifest.lock */,
 				4811E890221FCB3A00974854 /* Sources */,
 				4811E891221FCB3A00974854 /* Frameworks */,
 				4811E892221FCB3A00974854 /* Resources */,
@@ -149,6 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4811E8BF221FCB3D00974854 /* Build configuration list for PBXNativeTarget "TokTikTests" */;
 			buildPhases = (
+				AAEBC0F3D953D4E1034E604C /* [CP] Check Pods Manifest.lock */,
 				4811E8A4221FCB3D00974854 /* Sources */,
 				4811E8A5221FCB3D00974854 /* Frameworks */,
 				4811E8A6221FCB3D00974854 /* Resources */,
@@ -167,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4811E8C2221FCB3D00974854 /* Build configuration list for PBXNativeTarget "TokTikUITests" */;
 			buildPhases = (
+				AAC50E9E2394B549AFF84D78 /* [CP] Check Pods Manifest.lock */,
 				4811E8AF221FCB3D00974854 /* Sources */,
 				4811E8B0221FCB3D00974854 /* Frameworks */,
 				4811E8B1221FCB3D00974854 /* Resources */,
@@ -250,6 +293,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AAC50E9E2394B549AFF84D78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TokTikUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAEBC0F3D953D4E1034E604C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TokTikTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8640F4BD33BEC858AB2FD94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TokTik-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4811E890221FCB3A00974854 /* Sources */ = {
@@ -430,6 +542,7 @@
 		};
 		4811E8BD221FCB3D00974854 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56AFAD66EA1C740DB31E565C /* Pods-TokTik.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +561,7 @@
 		};
 		4811E8BE221FCB3D00974854 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 923B6804CF31FEC4F8AE71F1 /* Pods-TokTik.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +580,7 @@
 		};
 		4811E8C0221FCB3D00974854 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88193C37A44FE79B56944E37 /* Pods-TokTikTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +602,7 @@
 		};
 		4811E8C1221FCB3D00974854 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F7586E03C0461E57B2B3163 /* Pods-TokTikTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +624,7 @@
 		};
 		4811E8C3221FCB3D00974854 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4145EAF23A244CFFF6427DB3 /* Pods-TokTikUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +645,7 @@
 		};
 		4811E8C4221FCB3D00974854 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C31B361621C4C19E2776031 /* Pods-TokTikUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

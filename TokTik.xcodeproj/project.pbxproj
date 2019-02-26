@@ -177,6 +177,7 @@
 				4811E891221FCB3A00974854 /* Frameworks */,
 				4811E892221FCB3A00974854 /* Resources */,
 				6955D9210B23B1C941F58048 /* [CP] Embed Pods Frameworks */,
+				4811E8C52225F46A00974854 /* Build Number Auto Increment */,
 			);
 			buildRules = (
 			);
@@ -296,6 +297,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4811E8C52225F46A00974854 /* Build Number Auto Increment */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Number Auto Increment";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
 		6955D9210B23B1C941F58048 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

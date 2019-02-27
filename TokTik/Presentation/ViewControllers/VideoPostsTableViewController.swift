@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoPostsTableViewController: UITableViewController, UIMessageProtocol {
+class VideoPostsTableViewController: UITableViewController, UIMessageProtocol, UIActivityHUD {
     
     var postController: PostModelController!
     
@@ -22,14 +22,19 @@ class VideoPostsTableViewController: UITableViewController, UIMessageProtocol {
         super.viewDidLoad()
     
         self.addGestureRecognizers() 
-        
+        self.loadPosts(completion: nil)
+    }
+    
+    func loadPosts(completion: (() -> ())?) {
+        self.showHUD(status: "Loading posts")
         self.postController.getPosts(completion: { success in
+            self.hideHUD()
             if success {
-                self.showMessage(title: "Nice", message: "everything works", type: .success)
                 self.tableView.reloadData()
             } else {
                 self.showMessage(title: "Oups", message: "Could not fetch posts", type: .error)
             }
+            completion?()
         })
     }
     
@@ -53,6 +58,10 @@ class VideoPostsTableViewController: UITableViewController, UIMessageProtocol {
         let nextIndex = self.currentDisplayIndex + 1
         if nextIndex < self.postController.postsCount() {
             self.displayNewCellAtIndex(nextIndex)
+        } else {
+            self.loadPosts(completion: {
+                self.swipeUpGesture(self)
+            })
         }
     }
     

@@ -8,23 +8,57 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="Cn9-5Y-CS5">
             <objects>
                 <tableViewController id="0X5-ss-KSK" customClass="VideoPostsTableViewController" customModule="TokTik" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hQU-Il-VuZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hQU-Il-VuZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="622" id="iyV-85-vim" customClass="PostTableViewCell" customModule="TokTik" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="622"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="447" id="iyV-85-vim" customClass="PostTableViewCell" customModule="TokTik" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="447"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iyV-85-vim" id="ZZD-FY-WcC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="621.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="447"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiP-e1-T3T">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="447"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Km0-RO-fEU">
+                                            <rect key="frame" x="26" y="50" width="323" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="xYw-El-ioR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="MiP-e1-T3T" secondAttribute="trailing" id="1uv-ak-jPF"/>
+                                        <constraint firstItem="MiP-e1-T3T" firstAttribute="leading" secondItem="ZZD-FY-WcC" secondAttribute="leading" id="5oh-UB-bmk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Km0-RO-fEU" secondAttribute="trailing" constant="10" id="K89-WV-bYx"/>
+                                        <constraint firstItem="Km0-RO-fEU" firstAttribute="leading" secondItem="ZZD-FY-WcC" secondAttribute="leadingMargin" constant="10" id="Njq-Mx-e6N"/>
+                                        <constraint firstAttribute="bottom" secondItem="MiP-e1-T3T" secondAttribute="bottom" id="OjV-wq-g4N"/>
+                                        <constraint firstItem="Km0-RO-fEU" firstAttribute="top" secondItem="ZZD-FY-WcC" secondAttribute="top" constant="50" id="PhI-fK-rnv"/>
+                                        <constraint firstItem="MiP-e1-T3T" firstAttribute="top" secondItem="ZZD-FY-WcC" secondAttribute="top" id="gEv-EP-Xbg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="videoContainer" destination="MiP-e1-T3T" id="1db-0G-6gt"/>
+                                    <outlet property="videoTitle" destination="Km0-RO-fEU" id="E90-qY-Lng"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,6 +67,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Home" id="u2x-XK-EIY"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3V-id-bvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

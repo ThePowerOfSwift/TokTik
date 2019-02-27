@@ -20,11 +20,11 @@ class PostModelController {
     
     private var currentPostId: Int
     
-    private let idRandomUpperLimit = 500
+    private let idRandomUpperLimit = 900
     
     private let idRandomLowerLimit = 1
     
-    private static let postsRefillThreshold = 3
+    private static let postsRefillThreshold = 4
     
     private let requestManager: PostRequestProtocol
     

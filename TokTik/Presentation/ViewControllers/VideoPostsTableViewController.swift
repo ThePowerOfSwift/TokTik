@@ -133,9 +133,6 @@ extension VideoPostsTableViewController: PostCellDelegate {
     
     func reportPostBrokenLink() {
         self.showMessage(title: "Oups", message: "This video link seems broken :(", type: .error)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-            self.displayNextVideo(self)
-        })
     }
     
     func videoFinishedPlaying() {

@@ -94,7 +94,7 @@ extension VideoPostsTableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CellId.postCellId, for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
         
         let post = self.postController.post(at: indexPath.row)
-        cell.setup(title: post.title, videoUrl: post.videoURL)
+        cell.setup(title: post.title, videoUrl: post.videoURL, cellDelegate: self)
         
         return cell
     }
@@ -115,7 +115,18 @@ extension VideoPostsTableViewController {
     
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let postCell = cell as? PostTableViewCell else { return }
-        postCell.pauseVideo()
+        postCell.stopVideo()
     }
 
+}
+
+extension VideoPostsTableViewController: PostCellDelegate {
+    
+    func reportPostBrokenLink() {
+        self.showMessage(title: "Oups", message: "This video link seems broken :(", type: .error)
+    }
+    
+    func videoFinishedPlaying() {
+        
+    }
 }

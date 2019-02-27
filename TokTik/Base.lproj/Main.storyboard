@@ -35,7 +35,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Km0-RO-fEU">
-                                            <rect key="frame" x="26" y="50" width="323" height="60"/>
+                                            <rect key="frame" x="0.0" y="50" width="375" height="60"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.71433540239726023" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="xYw-El-ioR"/>
                                             </constraints>
@@ -46,12 +47,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="MiP-e1-T3T" secondAttribute="trailing" id="1uv-ak-jPF"/>
+                                        <constraint firstItem="Km0-RO-fEU" firstAttribute="leading" secondItem="ZZD-FY-WcC" secondAttribute="leading" id="3fr-7n-W5p"/>
                                         <constraint firstItem="MiP-e1-T3T" firstAttribute="leading" secondItem="ZZD-FY-WcC" secondAttribute="leading" id="5oh-UB-bmk"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Km0-RO-fEU" secondAttribute="trailing" constant="10" id="K89-WV-bYx"/>
-                                        <constraint firstItem="Km0-RO-fEU" firstAttribute="leading" secondItem="ZZD-FY-WcC" secondAttribute="leadingMargin" constant="10" id="Njq-Mx-e6N"/>
                                         <constraint firstAttribute="bottom" secondItem="MiP-e1-T3T" secondAttribute="bottom" id="OjV-wq-g4N"/>
                                         <constraint firstItem="Km0-RO-fEU" firstAttribute="top" secondItem="ZZD-FY-WcC" secondAttribute="top" constant="50" id="PhI-fK-rnv"/>
                                         <constraint firstItem="MiP-e1-T3T" firstAttribute="top" secondItem="ZZD-FY-WcC" secondAttribute="top" id="gEv-EP-Xbg"/>
+                                        <constraint firstAttribute="trailing" secondItem="Km0-RO-fEU" secondAttribute="trailing" id="w1E-Ii-IXF"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

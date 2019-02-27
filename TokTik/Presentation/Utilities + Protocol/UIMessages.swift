@@ -6,7 +6,6 @@
 //  Copyright © 2019 Daniel Bolivar Herrera. All rights reserved.
 //
 
-import UIKit
 import SwiftMessages
 
 protocol UIMessageProtocol {

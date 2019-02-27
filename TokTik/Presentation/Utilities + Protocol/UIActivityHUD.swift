@@ -6,9 +6,7 @@
 //  Copyright © 2019 Daniel Bolivar Herrera. All rights reserved.
 //
 
-import UIKit
 import SVProgressHUD
-
 
 protocol UIActivityHUD: class {
     func showHUD(status: String?) // Presents an activity view indicating an loading process
@@ -17,7 +15,7 @@ protocol UIActivityHUD: class {
 
 // MARK :- GPMessageViewProtocol default implementation for UIViewController subclasses
 
-extension GPUIActivityHUD where Self: UIViewController {
+extension UIActivityHUD where Self: UIViewController {
     
     func showHUD(status: String?=nil) {
         SVProgressHUD.setContainerView(self.view)

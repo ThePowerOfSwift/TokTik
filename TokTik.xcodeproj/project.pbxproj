@@ -35,6 +35,7 @@
 		4811E9002226314600974854 /* VideoPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8FF2226314600974854 /* VideoPostsTableViewController.swift */; };
 		4811E902222632B400974854 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E901222632B400974854 /* PostTableViewCell.swift */; };
 		4811E9082226343900974854 /* UIMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E9072226343900974854 /* UIMessages.swift */; };
+		4811E90F22264CB000974854 /* UIActivityHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E90E22264CB000974854 /* UIActivityHUD.swift */; };
 		5E0A09DE0676FC1165A2CCFA /* Pods_TokTik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD606591B960F9F7DA3B1F54 /* Pods_TokTik.framework */; };
 		CCE331C66FF87846C4566F57 /* Pods_TokTikUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6084AD486C55127E729311E /* Pods_TokTikUITests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		4811E8FF2226314600974854 /* VideoPostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPostsTableViewController.swift; sourceTree = "<group>"; };
 		4811E901222632B400974854 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		4811E9072226343900974854 /* UIMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMessages.swift; sourceTree = "<group>"; };
+		4811E90E22264CB000974854 /* UIActivityHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityHUD.swift; sourceTree = "<group>"; };
 		4C31B361621C4C19E2776031 /* Pods-TokTikUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikUITests/Pods-TokTikUITests.release.xcconfig"; sourceTree = "<group>"; };
 		56AFAD66EA1C740DB31E565C /* Pods-TokTik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokTik/Pods-TokTik.debug.xcconfig"; sourceTree = "<group>"; };
 		5F7586E03C0461E57B2B3163 /* Pods-TokTikTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikTests/Pods-TokTikTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				4811E9072226343900974854 /* UIMessages.swift */,
+				4811E90E22264CB000974854 /* UIActivityHUD.swift */,
 			);
 			path = "Utilities + Protocol";
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				4811E8E82225FA4400974854 /* APIRouter.swift in Sources */,
 				4811E902222632B400974854 /* PostTableViewCell.swift in Sources */,
 				4811E8F12226082900974854 /* LiveStreamFailsParser.swift in Sources */,
+				4811E90F22264CB000974854 /* UIActivityHUD.swift in Sources */,
 				4811E8FA2226289B00974854 /* PostModelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

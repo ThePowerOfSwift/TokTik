@@ -29,7 +29,9 @@ class PostModelController {
     private let requestManager: PostRequestProtocol
     
     init(postRequestManager: PostRequestProtocol) {
-        self.currentPostId =  Int.random(in: self.idRandomLowerLimit ... self.idRandomUpperLimit)
+        // This was meant to be random, but every now and then I get broken links
+        // Maybe it's just broken links, maybe there is something else that needs to be investigated
+        self.currentPostId = 500 //Int.random(in: self.idRandomLowerLimit ... self.idRandomUpperLimit)
         self.requestManager = postRequestManager
     }
     

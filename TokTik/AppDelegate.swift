@@ -15,7 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if let firstViewController = window?.rootViewController as? VideoPostsTableViewController {
+            //Inject dependencies into viewcontroller
+            
+            //This could look even better by implementing an utility class in charge of
+            // creating VC's, that would create each VC injecting all needed dependencies (by calling init(), therefore avoiding the need to force unwrap (!) ivars in each VC)
+            
+            //And to improve it further we could also add a navigation pattern that would take control of navigation
+            
+            let postRequestManager = PostRequestManager()
+            firstViewController.postController = PostModelController(postRequestManager: postRequestManager)
+        }
+        
         return true
     }
 

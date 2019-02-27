@@ -64,7 +64,9 @@ extension PostModelController: PostControllerProtocol {
     
     func getPosts(completion: @escaping (Bool) -> Void) {
         self.addNewPosts(amount: PostModelController.postsRefillThreshold, completion: { success in
-            completion(success)
+            DispatchQueue.main.async {
+                completion(success)
+            }
         })
     }
     

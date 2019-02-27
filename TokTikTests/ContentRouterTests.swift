@@ -12,8 +12,11 @@ import Alamofire
 
 class ContentReouterTests: XCTestCase {
     
+    var postRequestManager: PostRequestProtocol!
+    
     override func setUp() {
         super.setUp()
+        self.postRequestManager = PostRequestManager()
     }
     
     override func tearDown() {
@@ -26,14 +29,11 @@ class ContentReouterTests: XCTestCase {
         let ex = expectation(description: "Expecting a response")
         
         let postContentId = 200
-       
-        AF.request(ContentRouter.postContent(postId: postContentId))
-            .validate()
-            .responseData { (response: DataResponse<Data>) in
-                XCTAssert(response.result.isSuccess)
-                XCTAssertNotNil(response.data)
-                ex.fulfill()
-        }
+        
+        self.postRequestManager.requestPost(postId: postContentId, completion: { data in
+            XCTAssertNotNil(data)
+            ex.fulfill()
+        })
 
         waitForExpectations(timeout: 15) { (error) in
             if let error = error {

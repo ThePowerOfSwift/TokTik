@@ -39,6 +39,13 @@ class LiveStreamFailsParserTests: XCTestCase {
         XCTAssertNotNil(videoUrls?.first)
     }
 
+    func testPostTitleParser() {
+        let expectedPostTitle = "Doc and Peter Stormare forgot to lock the door"
+        let title = LiveStreamFailsParser.getPostTitle(textContent: self.parserText)
+        XCTAssertNotNil(title)
+        XCTAssertEqual(expectedPostTitle, title)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

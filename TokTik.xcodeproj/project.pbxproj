@@ -22,6 +22,13 @@
 		4811E8E82225FA4400974854 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8E72225FA4400974854 /* APIRouter.swift */; };
 		4811E8E92225FA4400974854 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8E72225FA4400974854 /* APIRouter.swift */; };
 		4811E8EC2225FAD500974854 /* ContentRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8EA2225FAD500974854 /* ContentRouterTests.swift */; };
+		4811E8EE222607B800974854 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8ED222607B800974854 /* Post.swift */; };
+		4811E8EF222607B800974854 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8ED222607B800974854 /* Post.swift */; };
+		4811E8F12226082900974854 /* LiveStreamFailsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8F02226082900974854 /* LiveStreamFailsParser.swift */; };
+		4811E8F22226082900974854 /* LiveStreamFailsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8F02226082900974854 /* LiveStreamFailsParser.swift */; };
+		4811E8F522260AF400974854 /* Post4821.html in Resources */ = {isa = PBXBuildFile; fileRef = 4811E8F422260AF400974854 /* Post4821.html */; };
+		4811E8F622260AF400974854 /* Post4821.html in Resources */ = {isa = PBXBuildFile; fileRef = 4811E8F422260AF400974854 /* Post4821.html */; };
+		4811E8F822260B1100974854 /* LiveStreamFailsParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811E8F722260B1100974854 /* LiveStreamFailsParserTests.swift */; };
 		5E0A09DE0676FC1165A2CCFA /* Pods_TokTik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD606591B960F9F7DA3B1F54 /* Pods_TokTik.framework */; };
 		CCE331C66FF87846C4566F57 /* Pods_TokTikUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6084AD486C55127E729311E /* Pods_TokTikUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +69,10 @@
 		4811E8E22225FA0F00974854 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4811E8E72225FA4400974854 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		4811E8EA2225FAD500974854 /* ContentRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRouterTests.swift; sourceTree = "<group>"; };
+		4811E8ED222607B800974854 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4811E8F02226082900974854 /* LiveStreamFailsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsParser.swift; sourceTree = "<group>"; };
+		4811E8F422260AF400974854 /* Post4821.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Post4821.html; sourceTree = "<group>"; };
+		4811E8F722260B1100974854 /* LiveStreamFailsParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsParserTests.swift; sourceTree = "<group>"; };
 		4C31B361621C4C19E2776031 /* Pods-TokTikUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikUITests/Pods-TokTikUITests.release.xcconfig"; sourceTree = "<group>"; };
 		56AFAD66EA1C740DB31E565C /* Pods-TokTik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokTik/Pods-TokTik.debug.xcconfig"; sourceTree = "<group>"; };
 		5F7586E03C0461E57B2B3163 /* Pods-TokTikTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokTikTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokTikTests/Pods-TokTikTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,9 +152,11 @@
 		4811E8AB221FCB3D00974854 /* TokTikTests */ = {
 			isa = PBXGroup;
 			children = (
+				4811E8F322260ACA00974854 /* Resources */,
 				4811E8AC221FCB3D00974854 /* TokTikTests.swift */,
 				4811E8AE221FCB3D00974854 /* Info.plist */,
 				4811E8EA2225FAD500974854 /* ContentRouterTests.swift */,
+				4811E8F722260B1100974854 /* LiveStreamFailsParserTests.swift */,
 			);
 			path = TokTikTests;
 			sourceTree = "<group>";
@@ -202,6 +215,7 @@
 		4811E8D52225F6EE00974854 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4811E8ED222607B800974854 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,8 +247,17 @@
 			isa = PBXGroup;
 			children = (
 				4811E8E22225FA0F00974854 /* Constants.swift */,
+				4811E8F02226082900974854 /* LiveStreamFailsParser.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4811E8F322260ACA00974854 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4811E8F422260AF400974854 /* Post4821.html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4A274821BCA5FD057FC5AF7E /* Pods */ = {
@@ -370,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4811E8A2221FCB3D00974854 /* LaunchScreen.storyboard in Resources */,
+				4811E8F522260AF400974854 /* Post4821.html in Resources */,
 				4811E89F221FCB3D00974854 /* Assets.xcassets in Resources */,
 				4811E89D221FCB3A00974854 /* Main.storyboard in Resources */,
 			);
@@ -379,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4811E8F622260AF400974854 /* Post4821.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,8 +535,10 @@
 				4811E8D62225F6EE00974854 /* ViewController.swift in Sources */,
 				4811E8E32225FA0F00974854 /* ContentRouter.swift in Sources */,
 				4811E898221FCB3A00974854 /* AppDelegate.swift in Sources */,
+				4811E8EE222607B800974854 /* Post.swift in Sources */,
 				4811E8E52225FA0F00974854 /* Constants.swift in Sources */,
 				4811E8E82225FA4400974854 /* APIRouter.swift in Sources */,
+				4811E8F12226082900974854 /* LiveStreamFailsParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,9 +548,12 @@
 			files = (
 				4811E8EC2225FAD500974854 /* ContentRouterTests.swift in Sources */,
 				4811E8E62225FA0F00974854 /* Constants.swift in Sources */,
+				4811E8F822260B1100974854 /* LiveStreamFailsParserTests.swift in Sources */,
 				4811E8E92225FA4400974854 /* APIRouter.swift in Sources */,
+				4811E8EF222607B800974854 /* Post.swift in Sources */,
 				4811E8AD221FCB3D00974854 /* TokTikTests.swift in Sources */,
 				4811E8E42225FA0F00974854 /* ContentRouter.swift in Sources */,
+				4811E8F22226082900974854 /* LiveStreamFailsParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

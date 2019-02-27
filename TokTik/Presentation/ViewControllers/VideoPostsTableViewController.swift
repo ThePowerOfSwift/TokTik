@@ -23,6 +23,15 @@ class VideoPostsTableViewController: UITableViewController, UIMessageProtocol, U
     
         self.addGestureRecognizers() 
         self.loadPosts(completion: nil)
+        
+        //Subscribe to notifications to check when video finishes playing
+        //This code was originally in the cell (better encapsulation - and it seems more logical so the parent does not now what his child is up to) but adding observer in cells could have some potential issues (not being released, and they're reused)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.displayNextVideo(_:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func loadPosts(completion: (() -> ())?) {

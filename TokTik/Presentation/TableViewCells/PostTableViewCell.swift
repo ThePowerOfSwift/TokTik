@@ -11,9 +11,7 @@ import AVFoundation
 
 protocol PostCellDelegate {
     func reportPostBrokenLink()
-    func videoFinishedPlaying()
 }
-
 
 class PostTableViewCell: UITableViewCell {
 
@@ -24,7 +22,6 @@ class PostTableViewCell: UITableViewCell {
     private var player: AVPlayer?
     
     private var delegate: PostCellDelegate?
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -63,18 +60,11 @@ class PostTableViewCell: UITableViewCell {
             
             self.videoContainer.layer.addSublayer(playerLayer)
             self.videoContainer.backgroundColor = .black
-            //Subscribe to notifications to check when video finishes playing
-            NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying),
-                                                   name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem)
         } else {
             //A better idea would be to just skip this video
             self.player?.replaceCurrentItem(with: nil)
             self.delegate?.reportPostBrokenLink()
         }
-    }
-    
-    @objc func playerDidFinishPlaying() {
-        self.delegate?.videoFinishedPlaying()
     }
     
     func playVideo() {
@@ -84,6 +74,5 @@ class PostTableViewCell: UITableViewCell {
     func stopVideo() {
         self.player?.pause()
         self.player?.replaceCurrentItem(with: nil)
-        NotificationCenter.default.removeObserver(NSNotification.Name.AVPlayerItemDidPlayToEndTime)
     }
 }

@@ -39,11 +39,11 @@ class VideoPostsTableViewController: UITableViewController, UIMessageProtocol, U
     }
     
     func addGestureRecognizers() {
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUpGesture))
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(displayNextVideo))
         swipeUp.direction = UISwipeGestureRecognizer.Direction.up
         self.view.addGestureRecognizer(swipeUp)
         
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeDownGesture))
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(displayPreviousVideo))
         swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         self.view.addGestureRecognizer(swipeDown)
     }
@@ -54,18 +54,18 @@ class VideoPostsTableViewController: UITableViewController, UIMessageProtocol, U
         self.tableView.scrollToRow(at: newIndexPath, at: .top, animated: true)
     }
     
-    @IBAction func swipeUpGesture(_ sender: Any) {
+    @IBAction func displayNextVideo(_ sender: Any) {
         let nextIndex = self.currentDisplayIndex + 1
         if nextIndex < self.postController.postsCount() {
             self.displayNewCellAtIndex(nextIndex)
         } else {
             self.loadPosts(completion: {
-                self.swipeUpGesture(self)
+                self.displayNextVideo(self)
             })
         }
     }
     
-    @IBAction func swipeDownGesture(_ sender: Any) {
+    @IBAction func displayPreviousVideo(_ sender: Any) {
         let nextIndex = self.currentDisplayIndex - 1
         if nextIndex >= 0 {
             self.displayNewCellAtIndex(nextIndex)
@@ -127,6 +127,6 @@ extension VideoPostsTableViewController: PostCellDelegate {
     }
     
     func videoFinishedPlaying() {
-        
+        self.displayNextVideo(self)
     }
 }

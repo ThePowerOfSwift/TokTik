@@ -36,20 +36,23 @@ class PostModelController {
     private func addNewPosts(amount: Int, completion: @escaping (Bool) -> Void) {
         var postReceived = 0
   
-        for _ in 0..<amount {
-            self.requestManager.requestPost(postId: self.currentPostId, completion: { data in
-                //Process and create post
-                guard let data = data, let title = LiveStreamFailsParser.getPostTitle(data: data),
-                    let videoUrl = LiveStreamFailsParser.getPostVideoURL(data: data, videoFormat: .mp4)?.first else {
-                        return
-                }
-                self.posts.append(Post(videoURL: videoUrl, title: title))
-                //Notify if ready
-                postReceived += 1
-                if postReceived == amount {
-                    completion(true)
-                }
-            })
+        DispatchQueue.global(qos: .background).async {
+            for _ in 0..<amount {
+                self.requestManager.requestPost(postId: self.currentPostId, completion: { data in
+                    //Process and create post
+                    guard let data = data, let title = LiveStreamFailsParser.getPostTitle(data: data),
+                        let videoUrl = LiveStreamFailsParser.getPostVideoURL(data: data, videoFormat: .mp4)?.first else {
+                            return
+                    }
+                    self.posts.append(Post(videoURL: videoUrl, title: title))
+                    //Notify if ready
+                    postReceived += 1
+                    if postReceived == amount {
+                        completion(true)
+                    }
+                })
+                self.currentPostId += 1
+            }
         }
     }
 }
